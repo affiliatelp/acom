@@ -1,0 +1,889 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+	padding: 0;
+	/* ページの背景色はbodyに適用し、PCで左右の余白部分まで色を付ける */
+	background-color: #f5f5f5; 
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 1.6;
+	color: #333;
+	text-align: center;
+	font-size:  1.2rem; /* 12px */
+}
+
+a {
+		text-decoration: none;
+}
+
+li {
+		list-style: none;
+}
+
+/* -------------------- 共通コンテナ設定 (.lp-containerのみで制御) -------------------- */
+.lp-container {
+		width: 100%; /* モバイルでは画面いっぱいに */
+		
+		/* PCでの中央揃えと固定幅の設定 */
+		margin: 0 auto;
+		
+		/* LPのコンテンツ領域の背景色（白） */
+		background-color: #ffffff;
+
+		/* モバイルでの左右の余白（コンテンツが画面端に張り付かないように） */
+		/* bodyにpaddingを入れる代わりに、lp-containerの子要素で対応 */
+}
+
+/* PC・タブレットでの幅固定と中央揃え */
+@media (min-width: 601px) {
+		/* bodyへの設定を外し、lp-containerにのみ適用 */
+		.lp-container {
+			max-width: 600px;
+				
+		}
+}
+
+/* 【画像】常に親要素の幅に合わせる */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	/* 全てのブロックレベルの画像を中央揃えにする */
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+/* -------------------- Header -------------------- */
+.ad-disclosure {
+  background-color: #c9e4c5; /* 薄緑 */
+  padding: 5px 0;
+}
+.ad-disclosure p {
+  font-size: 0.7rem;
+  margin: 0;
+  color: #105B62;
+}
+header h1 {
+  margin: 0;
+  background-color: #2D807C; 
+}
+
+/* -------------------- Hero Section -------------------- */
+.hero-section {
+  background-color: #c9e4c5; /* セクション全体の背景色 */
+  padding-bottom: 40px;
+}
+
+.hero-copy-container {
+  padding: 20px 10px;
+}
+.hero-copy {
+  font-size: 1.4rem;
+  color: #105B62; 
+  margin: 0;
+  line-height: 1.5;
+}
+.hero-copy .highlight {
+  background: linear-gradient(transparent 60%, #fff000 60%); /* 黄色マーカー */
+  font-weight: bold;
+}
+
+/* 3つの丸い画像のレイアウト */
+.life-events-grid {
+  position: relative;
+  max-width: 93%;
+  margin: 20px auto;
+  height: 900px; /* PC/スマホで調整が必要な場合は要微調整 */
+}
+
+.event-item {
+  position: absolute;
+  width: 60%; 
+}
+
+.item-child {
+  top: 0;
+  left: 3%;
+}
+
+.item-ceremony {
+  top: 33%;
+  right: 3%;
+}
+
+.item-appliances {
+  top: 66%;
+  left: 3%;
+}
+
+/* バナーと解決ビジュアル */
+.target-message-banner,
+.solution-visual {
+  margin-top: 20px;
+}
+
+/* -------------------- CTA Button (CSS実装) -------------------- */
+.bottom-cta {
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.reason-section .bottom-cta {
+	margin: 0px auto 30px;
+  padding: 0 15px;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ff9d4d, #ff7a28); /* オレンジグラデーション */
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 #d65a00; /* ボタンの立体感（影） */
+  transition: transform 0.1s;
+}
+
+.cta-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #d65a00;
+}
+
+.btn-icon {
+  width: 40px !important; /* アイコンサイズ固定 */
+  margin: 0 15px 0 0 !important;
+}
+
+.btn-text-group {
+  text-align: left;
+  color: #fff;
+}
+
+.btn-text-group .sub {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.btn-text-group .main {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.btn-text-group .main strong {
+  font-size: 1.8rem;
+  margin-right: 5px;
+}
+
+/* -------------------- Section 2: Reason Section -------------------- */
+.reason-section {
+  padding-top: 40px;
+  background-color: #fff;
+}
+
+/* 悩み導入テキスト */
+.problem-intro .small-text {
+  font-size: 1.5rem;
+  color: #4a7a7a;
+	margin: 40px 0 10px 0;
+	font-weight: normal;
+}
+
+.main-message {
+  font-size: 1.5rem;
+  color: #1a5d5d;
+	margin-bottom: 10px;
+}
+
+/* 「経験」の上のドット */
+.dot-text {
+  position: relative;
+  display: inline-block;
+	font-size: 2rem;
+}
+
+.dot-text::before {
+  content: '● ●'; 
+  position: absolute;
+  top: -4px;
+  left: 52%;
+  transform: translateX(-50%);
+  font-size: 0.5rem; /* 点の大きさ */
+  letter-spacing: 0.5em; /* 点と点の間隔 */
+  color: #ffeb3b;
+}
+
+/* チェックリスト */
+.check-list {
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  margin: 30px auto;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #1a5d5d;
+  border-bottom: 2px solid #ffeb3b;
+  padding-bottom: 5px;
+}
+
+/* チェックマーク（擬似要素でオレンジのチェックを作成） */
+.check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff9d4d;
+  font-weight: bold;
+  border: 2px solid #ff9d4d;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.character-voice {
+	margin: 15px 20px;
+}
+
+
+/* 緑背景 */
+.solution-bridge {
+  background-color: #c9e4c5;
+}
+
+.highlight-box {
+  font-size: 2.1rem;
+  color: #105B62;
+	padding: 50px 0 40px 0;
+	line-height: 2;
+}
+
+.highlight-box .marker {
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+
+/* ×印背景 */
+.no-shame-container {
+  padding: 30px 0 60px 0;
+  text-align: center;
+}
+
+.no-shame-inner {
+  background-image: url('../img/バツ1.png'); /* ×印画像 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  padding: 40px 10px;
+}
+
+.no-shame-inner .text-top {
+  font-size: 1.5rem;
+  color: #4a7a7a;
+  margin: 0;
+}
+
+.no-shame-inner .text-main {
+  font-size: 2rem;
+  color: #4a7a7a;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
+
+/* データエビデンス */
+.data-evidence {
+  padding: 20px 15px 0 14px;
+  color: #1a5d5d;
+}
+
+.deta-text {
+	font-size: 1.3rem;
+	line-height: 2;
+}
+
+.deta-text strong {
+	font-weight: bolder;
+	background: linear-gradient(transparent 60%, #fff000 60%);
+	font-size: 1.8rem;
+	color: #ff9d4d;
+}
+
+.data-location {
+  font-size: 1.3rem;
+  margin-top: 40px;
+}
+
+.data-number {
+  font-size: 2.5rem;
+  margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.data-number strong {
+  font-size: 5rem; 
+  color: #1a5d5d;
+}
+
+.data-evidence .marker {
+  background-color: #fff000;
+  font-weight: bold;
+}
+
+.graph-visual {
+	margin: 50px 20px;
+}
+
+.data-footer-text {
+  margin: 40px 0;
+  line-height: 2;
+	font-size: 1.4rem;
+}
+
+.data-footer-text strong {
+  font-size: 1.5rem;
+}
+
+/* 下部の吹き出し画像エリア */
+.final-char-area {
+	margin: 50px 20px 0 20px;
+}
+
+
+
+/* -------------------- Section 3: Usage Stats Section -------------------- */
+.usage-stats-section {
+  background-color: #c9e4c5; /* 薄緑背景をベースに */
+  padding-bottom: 17px;
+}
+
+.usage-visual-top img,
+.usage-visual-bottom img {
+  width: 100%;
+}
+
+/* メッセージボックス（緑背景内の白文字エリア） */
+.message-box {
+  font-size: 2.1rem;
+  color: #105B62;
+  line-height: 2;
+}
+
+.message-box .highlight-title {
+  font-size: 2rem;
+  color: #105B62;
+  padding: 50px 0 40px 0;
+  line-height: 2;
+	font-weight: normal;
+}
+
+.message-box .marker {
+	background: linear-gradient(transparent 60%, #fff000 60%);
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+
+
+
+/* 画像変更エリア（ギャンブル画像〜オレンジ×） */
+.image-change-area {
+  padding: 40px 10px;
+}
+
+.thought-visual {
+	margin: 0px 20px;
+}
+
+/* オレンジ版の×印（no-shame-containerにクラス追加） */
+.no-shame-container.orange-x .no-shame-inner {
+  background-image: url('../img/バツ2.png'); /* オレンジの×画像を想定 */
+  padding: 50px 10px;
+}
+
+.orange-x .no-shame-sub {
+  font-size: 1.3rem;
+  color: #1a5d5d;
+  margin: 0;
+}
+
+.orange-x .no-shame-main {
+  font-size: 1.8rem;
+  color: #1a5d5d;
+  font-weight: bold;
+}
+
+.data-lead-text {
+  color: #1a5d5d;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-top: 10px;
+}
+.data-lead-text strong {
+  background-color: #fff000;
+  padding: 0 2px;
+}
+
+/* -------------------- ランキング表 -------------------- */
+.ranking-container {
+  max-width: 85%;
+  margin: 0 auto 50px;
+}
+
+.ranking-list {
+  padding: 0;
+  margin: 0;
+}
+
+.rank-item {
+  display: flex;
+  align-items: stretch;
+  background-color: #fff;
+  margin-bottom: 8px;
+  border: 1px solid #fff;
+}
+
+/* 左側の順位部分 */
+.rank-num {
+  width: 80px;
+  background-color: #ffbd70; /* 4位・5位の薄いオレンジ */
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 上位3位は濃いオレンジ */
+.rank-1st .rank-num,
+.rank-2nd .rank-num,
+.rank-3rd .rank-num {
+  background-color: #ff9d4d;
+}
+
+/* 右側のテキスト部分 */
+.rank-content {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.rank-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a5d5d;
+}
+
+.rank-pct {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a5d5d;
+}
+
+/* 4位・5位、太字解除 */
+.rank-4th .rank-title,
+.rank-5th .rank-title {
+  font-size: 0.95rem;
+  font-weight: normal;
+}
+.rank-4th .rank-pct,
+.rank-5th .rank-pct {
+  font-size: 1rem;
+  font-weight: normal;
+  display: inline; /* 4位・5位は横並び */
+}
+.rank-4th .rank-content,
+.rank-5th .rank-content {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/* -------------------- 1社のみ利用データ -------------------- */
+.single-company-data {
+  padding: 20px 15px 0 15px;
+  color: #1a5d5d;
+}
+
+.data-intro-message {
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.highlight-summary .summary-lead {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.highlight-summary .summary-main {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.large-num {
+  color: #ff7a28;
+  font-size: 1.5rem;
+}
+.large-num strong {
+  font-size: 3rem;
+}
+
+.highlight-summary .marker {
+  background-color: #fff000;
+  padding: 0 4px;
+	font-weight: bold;
+}
+
+.summary-sub {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.pie-chart-visual {
+  margin: 30px 20px;
+}
+
+
+/* -------------------- Section 4: Benefits Section -------------------- */
+.benefits-section {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: 1.8rem;
+  color: #1a5d5d;
+  margin-bottom: 20px;
+}
+.section-title strong {
+  font-size: 3rem;
+  color: #1a5d5d;
+}
+
+/* 最短20分時計バッジ */
+.speed-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.speed-badge p {
+  font-size: 1.4rem;
+  color: #1a5d5d;
+  margin: 0 0 10px 0;
+}
+
+.speed-badge p strong {
+  color: #ff9d4d;
+  font-size: 1.8rem;
+}
+
+.speed-badge img {
+  width: 150px;
+}
+
+/* キャッチフレーズ */
+.catch-phrase {
+  font-size: 2rem;
+  color: #1a5d5d;
+  line-height: 1.5;
+  margin-bottom: 40px;
+	font-weight: normal;
+}
+
+.catch-phrase strong {
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  padding: 0 2px;
+}
+
+/* 不安共感エリア（薄緑背景） */
+.anxiety-area {
+  background-color: #c9e4c5;
+  padding: 40px 15px;
+  margin-bottom: 50px;
+}
+.anxiety-lead, .anxiety-footer {
+  font-size: 1.5rem;
+  color: #1a5d5d;
+  margin: 15px 0;
+}
+
+/* 不安カードの並び */
+.anxiety-visuals {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.anxiety-card {
+  margin-bottom: 25px;
+}
+.anxiety-card img {
+  border-radius: 15px; /* 画像の角を丸く */
+  
+}
+
+/* 解決メッセージ */
+.solution-message {
+  color: #1a5d5d;
+  line-height: 2;
+	font-size: 1.3rem;
+}
+.solution-message .marker {
+  padding: 0 4px;
+  font-weight: bolder;
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  font-size: 1.8rem;
+}
+.solution-message .under-line {
+  font-weight: bolder;
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  font-size: 1.8rem;
+  color: #ff9d4d;
+}
+
+/* スタッフ画像と吹き出し */
+.staff-visual {
+  margin: 50px 0;
+}
+.char-intro-bubble {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* --------------------  List (1-4) -------------------- */
+.merit-list {
+  margin-bottom: 50px;
+}
+
+.merit-item { 
+	max-width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	position: relative;
+  z-index: 1;
+} 
+
+/* メリットの見出しエリア */
+.merit-header {
+  width: 100%; /* 画像の横幅と合わせる */
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.merit-header h4 {
+  font-size: 1.5rem;
+  color: #1a5d5d;
+  margin: 0;
+  padding-left: 5px;  
+	position: absolute;
+  z-index: 2;
+  left: 22%;
+  top: 15%;
+}
+
+.merit-header .marker {
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  font-weight: bold;
+  padding: 0 2px;
+	color: #ff9d4d;
+  font-size: 1.5rem;
+}
+
+/* メリットの本文（画像と説明） */
+.merit-body {
+  position: relative;
+}
+
+.merit-body img {
+  width: 100%;
+  height: auto;
+}
+
+/* 下の注釈文 */
+.merit-desc {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #1a5d5d;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.merit-desc .note {
+  font-size: 0.75em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+
+/* -------------------- 申込section -------------------- */
+.entry-flow-section {
+  background-color: #fff;
+  padding: 30px 0 7px 0;
+}
+
+.flow-intro {
+  margin-bottom: 30px;
+}
+
+.flow-intro .sub-lead {
+  font-size: 1.3rem;
+  color: #1a5d5d;
+}
+
+.sub-lead strong {
+	font-size: 2rem;
+}
+
+
+.flow-intro .marker {
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  padding: 0 4px;
+}
+
+/* ステップ図解エリア */
+.flow-visual {
+  max-width: 90%;
+  margin: 0 auto 50px;
+}
+
+.flow-step img {
+  width: 68%;
+  /* ステップ画像の影を再現したい場合は追加 */
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+}
+
+/* CSSで作成する青い下向き矢印 */
+.flow-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 25px solid #005596; /* 濃い青色 */
+}
+
+.flow-note {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #1a5d5d;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* クロージング画像 */
+.closing-visual {
+  margin-bottom: 40px;
+}
+
+/* 最終プッシュエリア */
+.final-push-area {
+  padding: 10px 15px 0 15px;
+  color: #1a5d5d;
+}
+
+
+.speed-diag-title {
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.speed-diag-title .marker {
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  font-weight: bold;
+	font-size: 2rem;
+}
+
+/* 「本日中」のチェックエリア */
+.today-check {
+  margin-bottom: 30px;
+  line-height: 1.8;
+	font-size: 1.3rem;
+}
+
+.highlight-orange {
+  background: linear-gradient(transparent 60%, #fff000 60%);
+  font-weight: bold;
+  font-size: 2rem;
+	color: #FF8636;
+}
+
+.check-now {
+  font-size: 1.7rem;
+  color: #1a5d5d;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.check-mark {
+  color: #ff9d4d;
+  font-size: 1.8rem;
+  margin-right: 5px;
+}
+
+/* -------------------- Footer -------------------- */
+
+.footer-inner {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* 注釈エリア */
+.footer-notes {
+  text-align: left; /* 注釈は左寄せが見やすい */
+  display: inline-block; /* 中央寄せの中での左寄せを実現 */
+  margin-bottom: 14px;
+}
+
+.footer-notes p {
+  font-size: 0.8rem; /* 文字サイズを落とす */
+  color: #333;
+  margin: 0 0 3px 0;
+  line-height: 1.6;
+  font-weight: normal; /* 注釈は太字にしない */
+}
+
+/* 運営会社リンク */
+.company {
+  font-size: 0.7rem;
+  padding: 3px 0 5px 0;
+}
+
+.company a {
+	color: #333;
+	text-decoration: underline;
+}
+
+.company a:hover {
+  opacity: 0.7;
+}
+
+/* -------------------- レスポンシブ -------------------- */
+ 
