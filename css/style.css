@@ -100,7 +100,7 @@ header h1 {
   position: relative;
   max-width: 93%;
   margin: 20px auto;
-  height: 980px; /* PC/スマホで調整が必要な場合は要微調整 */
+  height: 600px; /* PC/スマホで調整が必要な場合は要微調整 */
 }
 
 .event-item {
@@ -130,6 +130,11 @@ header h1 {
 }
 
 /* -------------------- CTA Button (CSS実装) -------------------- */
+.bottom-cta {
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
 .bottom-cta {
   margin: 30px auto;
   padding: 0 15px;
@@ -234,8 +239,14 @@ header h1 {
   margin-bottom: 12px;
   font-size: 0.8rem;
   color: #1a5d5d;
-  border-bottom: 2px solid #ffeb3b;
   padding-bottom: 5px;
+}
+
+.check-list li span {
+	display: inline-block; 
+  border-bottom: 2px solid #fff000; 
+  padding-bottom: 2px;
+  color: #1a5d5d;
 }
 
 /* チェックマーク（擬似要素でオレンジのチェックを作成） */
@@ -351,11 +362,11 @@ header h1 {
 .data-footer-text {
   margin: 40px 0;
   line-height: 2;
-	font-size: 1.4rem;
+	font-size: 1rem;
 }
 
 .data-footer-text strong {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 /* 下部の吹き出し画像エリア */
@@ -384,7 +395,7 @@ header h1 {
 }
 
 .message-box .highlight-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #105B62;
   padding: 50px 0 40px 0;
   line-height: 2;
@@ -394,7 +405,7 @@ header h1 {
 .message-box .marker {
 	background: linear-gradient(transparent 60%, #fff000 60%);
   font-weight: bold;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
 }
 
 
@@ -421,19 +432,19 @@ header h1 {
 }
 
 .orange-x .no-shame-main {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #1a5d5d;
   font-weight: bold;
 }
 
 .data-lead-text {
   color: #1a5d5d;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2;
   margin-top: 10px;
 }
 .data-lead-text strong {
-  background-color: #fff000;
+	background: linear-gradient(transparent 60%, #fff000 60%);
   padding: 0 2px;
 }
 
@@ -462,7 +473,7 @@ header h1 {
   background-color: #ffbd70; /* 4位・5位の薄いオレンジ */
   color: #fff;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -488,14 +499,14 @@ header h1 {
 
 .rank-title {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #1a5d5d;
 }
 
 .rank-pct {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #1a5d5d;
 }
@@ -503,12 +514,12 @@ header h1 {
 /* 4位・5位、太字解除 */
 .rank-4th .rank-title,
 .rank-5th .rank-title {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: normal;
 }
 .rank-4th .rank-pct,
 .rank-5th .rank-pct {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: normal;
   display: inline; /* 4位・5位は横並び */
 }
@@ -526,27 +537,28 @@ header h1 {
 }
 
 .data-intro-message {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2;
   margin-bottom: 40px;
 }
 
 .highlight-summary .summary-lead {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 5px;
 }
 
 .highlight-summary .summary-main {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .large-num {
   color: #ff7a28;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
+
 .large-num strong {
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 .highlight-summary .marker {
@@ -557,7 +569,7 @@ header h1 {
 
 .summary-sub {
   margin-top: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2;
 }
 
@@ -569,17 +581,18 @@ header h1 {
 /* -------------------- Section 4: Benefits Section -------------------- */
 .benefits-section {
   background-color: #fff;
-  padding: 50px 0;
+  padding: 25px 0;
 }
 
 /* セクションタイトル */
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #1a5d5d;
   margin-bottom: 20px;
 }
+
 .section-title strong {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #1a5d5d;
 }
 
@@ -592,14 +605,14 @@ header h1 {
 }
 
 .speed-badge p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #1a5d5d;
   margin: 0 0 10px 0;
 }
 
 .speed-badge p strong {
   color: #ff9d4d;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .speed-badge img {
@@ -608,7 +621,7 @@ header h1 {
 
 /* キャッチフレーズ */
 .catch-phrase {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #1a5d5d;
   line-height: 1.5;
   margin-bottom: 40px;
@@ -624,10 +637,11 @@ header h1 {
 .anxiety-area {
   background-color: #c9e4c5;
   padding: 40px 15px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
+
 .anxiety-lead, .anxiety-footer {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #1a5d5d;
   margin: 15px 0;
 }
@@ -649,24 +663,26 @@ header h1 {
 .solution-message {
   color: #1a5d5d;
   line-height: 2;
-	font-size: 1.3rem;
+	font-size: 1rem;
 }
+
 .solution-message .marker {
   padding: 0 4px;
   font-weight: bolder;
   background: linear-gradient(transparent 60%, #fff000 60%);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
+
 .solution-message .under-line {
   font-weight: bolder;
   background: linear-gradient(transparent 60%, #fff000 60%);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #ff9d4d;
 }
 
 /* スタッフ画像と吹き出し */
 .staff-visual {
-  margin: 50px 0;
+  margin: 35px 0;
 }
 .char-intro-bubble {
   max-width: 85%;
@@ -683,7 +699,7 @@ header h1 {
 
 .merit-item { 
 	max-width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -699,14 +715,14 @@ header h1 {
 }
 
 .merit-header h4 {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   color: #1a5d5d;
   margin: 0;
   padding-left: 5px;  
 	position: absolute;
   z-index: 2;
   left: 22%;
-  top: 15%;
+  top: 13%;
 }
 
 .merit-header .marker {
@@ -714,7 +730,7 @@ header h1 {
   font-weight: bold;
   padding: 0 2px;
 	color: #ff9d4d;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 /* メリットの本文（画像と説明） */
@@ -730,7 +746,7 @@ header h1 {
 /* 下の注釈文 */
 .merit-desc {
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #1a5d5d;
   font-weight: bold;
   line-height: 1.6;
@@ -755,12 +771,12 @@ header h1 {
 }
 
 .flow-intro .sub-lead {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #1a5d5d;
 }
 
 .sub-lead strong {
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 
@@ -798,7 +814,7 @@ header h1 {
 
 .flow-note {
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #1a5d5d;
   font-weight: bold;
   margin-top: 5px;
@@ -817,7 +833,7 @@ header h1 {
 
 
 .speed-diag-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2;
   margin-bottom: 30px;
 }
@@ -825,25 +841,25 @@ header h1 {
 .speed-diag-title .marker {
   background: linear-gradient(transparent 60%, #fff000 60%);
   font-weight: bold;
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 /* 「本日中」のチェックエリア */
 .today-check {
   margin-bottom: 30px;
   line-height: 1.8;
-	font-size: 1.3rem;
+	font-size: 1rem;
 }
 
 .highlight-orange {
   background: linear-gradient(transparent 60%, #fff000 60%);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.4rem;
 	color: #FF8636;
 }
 
 .check-now {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #1a5d5d;
   font-weight: bold;
   margin-top: 10px;
@@ -870,7 +886,7 @@ header h1 {
 }
 
 .footer-notes p {
-  font-size: 0.8rem; /* 文字サイズを落とす */
+  font-size: 0.5rem; /* 文字サイズを落とす */
   color: #333;
   margin: 0 0 3px 0;
   line-height: 1.6;
@@ -879,7 +895,7 @@ header h1 {
 
 /* 運営会社リンク */
 .company {
-  font-size: 0.7rem;
+  font-size: 0.45rem;
   padding: 3px 0 5px 0;
 }
 
@@ -911,6 +927,11 @@ header h1 {
 	.hero-copy {
 		font-size: 1.4rem;
 	}
+
+.life-events-grid {
+  height: 980px; /* PC/スマホで調整が必要な場合は要微調整 */
+}
+
 
 	/* --------- cta -----------*/
 	.btn-text-group .main {
@@ -975,5 +996,184 @@ header h1 {
 		font-size: 5rem; 
 	}
 
+	.data-footer-text strong {
+		font-size: 1.5rem;
+	}
+
+	.data-footer-text {
+		font-size: 1.4rem;
+	}
 	
+	.message-box .marker {
+		font-size: 2.6rem;
+	}
+
+	.message-box .highlight-title {
+		font-size: 2rem;
+	}
+
+	.orange-x .no-shame-main {
+		font-size: 1.8rem;
+	}
+
+	.data-lead-text {
+		font-size: 1.2rem;
+	}
+
+	.rank-pct {
+		font-size: 1.2rem;
+	}
+
+	.rank-title {
+		font-size: 1.2rem;
+	}
+
+	.rank-4th .rank-pct,
+	.rank-5th .rank-pct {
+		font-size: 1rem;
+	}
+
+	.rank-4th .rank-title,
+	.rank-5th .rank-title {
+		font-size: 1rem;
+	}
+
+	.rank-num {
+		font-size: 1.8rem;
+	}
+
+	.data-intro-message {
+		font-size: 1.2rem;
+	}
+
+	.highlight-summary .summary-lead {
+		font-size: 1.2rem;
+	}
+
+	.summary-sub {
+		font-size: 1.2rem;
+	}
+
+	.highlight-summary .summary-main {
+		font-size: 1.3rem;
+	}
+
+	.large-num strong {
+		font-size: 3rem;
+	}
+
+	.large-num {
+		font-size: 1.5rem;
+	}
+
+	.section-title {
+		font-size: 1.8rem;
+	}
+
+	.section-title strong {
+		font-size: 3rem;
+	}
+
+	.speed-badge p {
+		font-size: 1.4rem;
+	}
+
+	.speed-badge p strong {
+		font-size: 1.8rem;
+	}
+
+	.catch-phrase {
+		font-size: 2rem;
+	}
+
+	.anxiety-lead, .anxiety-footer {
+		font-size: 1.5rem;
+	}
+
+	.solution-message {
+		font-size: 1.3rem;
+	}
+
+	.solution-message .marker {
+		font-size: 1.8rem;
+	}
+
+	.solution-message .under-line {
+  	font-size: 1.3rem;
+	}
+
+	.staff-visual {
+		margin: 50px 0;
+	}
+
+	.anxiety-area {
+		margin-bottom: 50px;
+	}
+
+	.merit-header h4 {
+		font-size: 1.5rem;
+		top: 15%;
+	}
+
+	.merit-header .marker {
+		font-size: 1.5rem;
+	}
+
+	.merit-desc {
+		font-size: 1.2rem;
+	}
+
+	.merit-item { 
+		margin-bottom: 50px;
+	}
+
+	.benefits-section {
+		padding: 50px 0;
+	}
+
+	.flow-intro .sub-lead {
+		font-size: 1.3rem;
+	}
+
+	.sub-lead strong {
+		font-size: 2rem;
+	}
+
+	.flow-note {
+		font-size: 0.9rem;
+		padding: 0 30px;
+	}
+
+	.speed-diag-title {
+		font-size: 1.3rem;
+	}
+
+	.speed-diag-title .marker {
+		font-size: 2rem;
+	}
+
+	.today-check {
+		font-size: 1.3rem;
+	}
+
+	.highlight-orange {
+		font-size: 2rem;
+	}
+	
+	.check-now {
+		font-size: 1.7rem;
+	}
+
+	.footer-notes p {
+		font-size: 0.8rem; /* 文字サイズを落とす */
+	}
+
+	.company {
+		font-size: 0.7rem;
+	}
+
+
+
+
+
 }
