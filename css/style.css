@@ -642,7 +642,7 @@ header h1 {
 }
 
 .anxiety-lead, .anxiety-footer {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #1a5d5d;
   margin: 15px 0;
 }
@@ -764,7 +764,7 @@ header h1 {
 /* -------------------- 申込section -------------------- */
 .entry-flow-section {
   background-color: #fff;
-  padding: 30px 0 7px 0;
+  padding: 5px 0 7px 0;
 }
 
 .flow-intro {
@@ -1173,8 +1173,8 @@ header h1 {
 		font-size: 0.7rem;
 	}
 
-
-
-
+	.entry-flow-section {
+		padding: 30px 0 7px 0;
+	}
 
 }
