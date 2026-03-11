@@ -154,6 +154,7 @@ header h1 {
   border-radius: 10px;
   box-shadow: 0 4px 0 #d65a00; /* ボタンの立体感（影） */
   transition: transform 0.1s;
+	gap: 10px;
 }
 
 .cta-btn:active {
@@ -167,13 +168,13 @@ header h1 {
 }
 
 .btn-text-group {
-  text-align: left;
+  text-align: center;
   color: #fff;
 }
 
 .btn-text-group .sub {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -346,7 +347,7 @@ header h1 {
 }
 
 .data-number strong {
-  font-size: 4rem; 
+  font-size: 3.5rem; 
   color: #1a5d5d;
 }
 
@@ -935,7 +936,7 @@ header h1 {
 
 	/* --------- cta -----------*/
 	.btn-text-group .main {
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
 
 	.cta-btn {
@@ -943,7 +944,7 @@ header h1 {
 	}
 
 	.btn-text-group .main strong {
-  font-size: 1.8rem;
+  font-size: 2rem;
 	}
 
 	/* ------------------------*/
