@@ -63,9 +63,15 @@ img {
   margin: 0;
   color: #105B62;
 }
-header h1 {
+.header-icon {
   margin: 0;
   background-color: #2D807C; 
+}
+
+.header-icon img {
+	width: 50%;
+	margin: 0;
+	padding: 10px 0 0 8px;
 }
 
 /* -------------------- Hero Section -------------------- */
