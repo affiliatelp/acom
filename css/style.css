@@ -302,7 +302,7 @@ img {
 }
 
 .no-shame-inner {
-  background-image: url('../img/batsu1.png'); /* ×印画像 */
+  background-image: url('https://card-loan-madoguchi.com/img/batsu1.png'); /* ×印画像 */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -428,7 +428,7 @@ img {
 
 /* オレンジ版の×印（no-shame-containerにクラス追加） */
 .no-shame-container.orange-x .no-shame-inner {
-  background-image: url('../img/batsu2.png'); /* オレンジの×画像を想定 */
+  background-image: url('https://card-loan-madoguchi.com/img/batsu2.png'); /* オレンジの×画像を想定 */
   padding: 50px 10px;
 }
 
